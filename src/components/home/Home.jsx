@@ -8,7 +8,7 @@ const Home = () => {
           <h1>Desenvolvedor FrontEnd</h1>
           <p>Tenho 22 anos sou formado em Análise e Desenvolvimento de sistemas buscando meu primeiro emprego na área de de desenvolvimento, gosto de resolver problemas utilizando novas tecnologias que otimizem as </p>
         </div>
-        <div className="hidden md:w-1/2 md:flex">
+        <div className="hidden sm:w-1/2 sm:flex">
           <img src="/developer.svg" alt="people at the computer" />
         </div>
       </section>
