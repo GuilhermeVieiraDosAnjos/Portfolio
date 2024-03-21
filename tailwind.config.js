@@ -12,7 +12,8 @@ export default {
       fontFamily:{
         montserrat: ["Montserrat", "sans-serif"],
         julius: ["Julius Sans One", "sans-serif"],
-        quicksand : ["Quicksand", "sans-serif"]
+        quicksand : ["Quicksand", "sans-serif"],
+        hind : [  "Hind Siliguri", "sans-serif"]
       }
     },
     screens: {
