@@ -6,7 +6,7 @@ function App() {
   return (
     <>
 
-      <div className="overflow-x-hidden">
+      <div className="overflow-x-hidden h-auto">
         <Navbar/>
         <Home />
         <Projects />
