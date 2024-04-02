@@ -8,10 +8,14 @@ import { IoLogoJavascript } from "react-icons/io5";
 import { SiTailwindcss } from "react-icons/si";
 import { IoCheckmarkDone } from "react-icons/io5";
 import { IoIosContact,IoIosCopy } from "react-icons/io";
+import { MdLocationOn, MdEmail, MdWork  } from "react-icons/md";
 
 
 export {
     About,
+    MdEmail,
+    MdWork,
+    MdLocationOn,
     FaLinkedin,
     IoCheckmarkDone,
     FaFilePdf,
@@ -28,3 +32,4 @@ export {
     Navbar, 
     Projects
 }
+

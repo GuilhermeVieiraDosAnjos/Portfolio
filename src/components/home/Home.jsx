@@ -1,21 +1,91 @@
+import { useState } from "react";
+import {
+  MdLocationOn,
+  MdEmail,
+  MdWork,
+  FaGithub,
+  FaFilePdf,
+  FaLinkedin,
+} from "../index.js";
 
 const Home = () => {
+  const [email, setEmail] = useState("guilhermevieiradosanjos02@gmail.com");
+  const [navbar, setNavbar] = useState(true)
+  const [copySuccess, setCopySuccess] = useState(false);
+
+
+  const toggleNavbarVisibility = () => {
+    setNavbar(!navbar)
+  }
+
+  const handleCopyToClipboard = () => {
+    navigator.clipboard
+      .writeText(email)
+      .then(() => {
+        setCopySuccess(true);
+        setTimeout(() => {
+          setCopySuccess(false);
+        }, 3000);
+      })
+      .catch((error) => {
+        console.error("Failed to copy email: ", error);
+      });
+  };
   return (
-    <div id="home">
-      <section className="h-screen w-screen m-4 flex justify-center items-center ">
-        <div className="font-montserrat w-1/2">
-          <p className="text-xl">Olá me chamo Guilherme Vieira dos Anjos e sou </p>
-          <h1 className="text-8xl text-wrap font-hind text-center">Desenvolvedor FrontEnd</h1>
-          <div className="w-full  flex justify-end">
-            <p className="w-full text-justify text-lg">Tenho 22 anos, sou formado em Análise e Desenvolvimento de Sistema com um ano 1 ano de experiencia trabalhando como freelancer. </p>
+    <div className="h-screen ">
+      <section className="flex h-full items-center gap-4 justify-center ">
+        <div className="p-2 md:p-0">
+          <div className="text-xl">
+            <p>
+              Olá, me chamo{" "}
+              <strong className="text-pPurple">
+                Guilherme Vieira dos Anjos
+              </strong>
+            </p>
+          </div>
+          <div className="text-xl">
+            <p>
+              Eu sou um{" "}
+              <strong className="text-pPurple">Desenvolvedor Frontend</strong>
+            </p>
+          </div>
+          <div className="flex items-center gap-2">
+            <MdLocationOn className="text-pPurple" />
+            <p>Brasília-DF</p>
+          </div>
+          <div className="flex items-center gap-2">
+            <MdWork className="text-pPurple" />
+            <p>Disponível</p>
+          </div>
+          <div>
+            <button onClick={handleCopyToClipboard} className="flex items-center gap-2">
+              <MdEmail className="text-pPurple" />
+              guilhermevieiradosanjos02@gmail.com{" "}
+            </button>
+          </div>
+          <div className="flex justify-around text-center text-pPurple items-center text-xl my-10">
+            <a target="_blank" href="https://github.com/GuilhermeVieiraDosAnjos">
+              <FaGithub />
+            </a>
+            <a href="">
+              <FaFilePdf />
+            </a>
+            <a target="_blank" href="https://www.linkedin.com/in/guilherme-vieira-dos-anjos-7709881b4/">
+              <FaLinkedin />
+            </a>
           </div>
         </div>
-        <div className="hidden md:w-1/2 sm:flex">
-          <img src="/developer.svg" alt="people at the computer" />
+        <div className="hidden  sm:flex">
+          <img
+            src="/developer.svg"
+            className="h-96"
+            alt="people at the computer"
+          />
         </div>
       </section>
     </div>
-  )
-}
 
-export default Home
+  );
+};
+
+export default Home;

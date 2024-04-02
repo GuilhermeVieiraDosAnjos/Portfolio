@@ -6,14 +6,12 @@ function App() {
   return (
     <>
 
-      <div className="overflow-x-hidden h-auto">
+      <div className="overflow-x-hidden overflow-y-hidden h-auto">
         <Navbar/>
         <Home />
         <Projects />
         <About/>
         <Contact />
-        
-        
       </div>
     </>
   );
