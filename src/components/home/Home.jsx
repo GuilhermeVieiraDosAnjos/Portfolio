@@ -33,7 +33,7 @@ const Home = () => {
   };
   return (
     <div className="h-screen ">
-      <section className="flex h-full items-center gap-4 justify-center ">
+      <section id="home" className="flex h-full items-center gap-4 justify-center ">
         <div className="p-2 md:p-0">
           <div className="text-xl">
             <p>

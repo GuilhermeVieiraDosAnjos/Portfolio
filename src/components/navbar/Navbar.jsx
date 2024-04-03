@@ -1,55 +1,47 @@
-import { useState } from "react";
+import React, { useState } from 'react'
 import { CiMenuBurger } from "react-icons/ci";
 import { IoCloseOutline } from "react-icons/io5";
 
 const Navbar = () => {
-  const [openMenu, setOpenMenu] = useState(false);
+ const [menuOpen, setMenuOpen] = useState(false)
 
-  const toggleMenu = () => {
-    setOpenMenu(!openMenu);
-  };
+ const toggleMenu = () => {
+  setMenuOpen(!menuOpen)
+ }
 
-  const closeMenu = () => {
-    setOpenMenu(false);
-  };
-
+ const closeMenu = () => {
+  setMenuOpen(false)
+ }
+  
   return (
-    <div className="bg-slate-50 w-full p-4 md:p-0 md:flex items-center justify-between">
-      <div className="flex justify-between font-quicksand">
-        <h1 className="mx-4 text-pPurple">Dos Anjos</h1>
-
-        <button type="button" onClick={toggleMenu} className="md:hidden">
-          {openMenu ? (
-            <IoCloseOutline className="2xl" />
-          ) : (
-            <CiMenuBurger className="2xl" />
+    <nav className="bg-slate-50 p-2 fixed top-0 w-full z-10 font-quicksand ">
+      <div className=' flex justify-between md:flex md:justify-between items-center'>
+        <h1 className='text-pPurple'>Dos Anjos</h1>
+        <ul className='hidden md:flex md:justify-center' >
+          <li className="mx-4"><a className="text-pPurple hover:text-gray-300" href="#home">Home</a></li>
+          <li className="mx-4"><a className="text-pPurple hover:text-gray-300" href="#projects">Projects</a></li>
+          <li className="mx-4"><a className="text-pPurple hover:text-gray-300" href="#aboutMe">About Me</a></li>
+          <li className="mx-4"><a className="text-pPurple hover:text-gray-300" href="#contact">Contact</a></li>
+        </ul>
+        <button type='button' onClick={toggleMenu} className='md:hidden'>
+          {menuOpen ? (
+            <IoCloseOutline className='text-xl'/>
+          ): (
+            <CiMenuBurger className="text-xl"/>
           )}
         </button>
       </div>
-      <div
-        className={`font-montserrat md:flex mx-2 ${
-          openMenu
-            ? "flex h-screen overflow-y-hidden justify-center items-center  "
-            : "hidden"
-        }`}
-      >
-        <ul className="gap-4 md:flex text-pPurple ">
-          <li className="my-8 md:my-4" onClick={closeMenu}>
-            <a href="#home">Home</a>
-          </li>
-          <li onClick={closeMenu} className="my-8 md:my-4">
-            <a href="#projects">Projects</a>
-          </li>
-          <li onClick={closeMenu} className="my-8 md:my-4">
-            <a href="#aboutMe">Sobre Mim</a>
-          </li>
-          <li onClick={closeMenu} className="my-8 md:my-4">
-            <a href="#contact">Contato</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  );
-};
 
-export default Navbar;
+      <ul className={`font-montserrat md:hidden ${menuOpen ? "flex flex-col items-center h-screen" : "hidden"}`}>
+        <li className="my-8" onClick={closeMenu}><a className="text-pPurple hover:text-gray-300" href="#home">Home</a></li>
+        <li className="my-8" onClick={closeMenu}><a className="text-pPurple hover:text-gray-300" href="#projects">Projects</a></li>
+        <li className="my-8" onClick={closeMenu}><a className="text-pPurple hover:text-gray-300" href="#aboutMe">About Me</a></li>
+        <li className="my-8" onClick={closeMenu}><a className="text-pPurple hover:text-gray-300" href="#contact">Contact</a></li>
+      </ul>
+
+      
+    </nav>
+  )
+}
+
+export default Navbar
