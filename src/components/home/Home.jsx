@@ -6,17 +6,13 @@ import {
   FaGithub,
   FaFilePdf,
   FaLinkedin,
+  IoCheckmarkDone
 } from "../index.js";
 
 const Home = () => {
   const [email, setEmail] = useState("guilhermevieiradosanjos02@gmail.com");
   const [navbar, setNavbar] = useState(true)
   const [copySuccess, setCopySuccess] = useState(false);
-
-
-  const toggleNavbarVisibility = () => {
-    setNavbar(!navbar)
-  }
 
   const handleCopyToClipboard = () => {
     navigator.clipboard
@@ -49,28 +45,32 @@ const Home = () => {
               <strong className="text-pPurple">Desenvolvedor Frontend</strong>
             </p>
           </div>
-          <div className="flex items-center gap-2">
-            <MdLocationOn className="text-pPurple" />
+          <div className="flex items-center gap-2 text-pPurple">
+            <MdLocationOn />
             <p>Brasília-DF</p>
           </div>
-          <div className="flex items-center gap-2">
-            <MdWork className="text-pPurple" />
+          <div className="flex items-center gap-2  text-pPurple">
+            <MdWork />
             <p>Disponível</p>
           </div>
-          <div>
+          <div className="text-pPurple ease-in-out transition duration-300 hover:scale-105">
             <button onClick={handleCopyToClipboard} className="flex items-center gap-2">
-              <MdEmail className="text-pPurple" />
-              guilhermevieiradosanjos02@gmail.com{" "}
+              {copySuccess ? (
+                <IoCheckmarkDone/>
+              ): (
+              <MdEmail/>
+              )}
+              guilhermevieiradosanjos02@gmail.com
             </button>
           </div>
-          <div className="flex justify-around text-center text-pPurple items-center text-xl my-10">
-            <a target="_blank" href="https://github.com/GuilhermeVieiraDosAnjos">
+          <div className="flex justify-around text-center text-pPurple items-center text-2xl my-10 ">
+            <a target="_blank" href="https://github.com/GuilhermeVieiraDosAnjos" className="hover:-translate-y-1 hover:scale-125 duration-300">
               <FaGithub />
             </a>
-            <a href="">
+            <a href="\public\Curriculum.pdf" download={true} className="hover:-translate-y-1 hover:scale-125 duration-300">
               <FaFilePdf />
             </a>
-            <a target="_blank" href="https://www.linkedin.com/in/guilherme-vieira-dos-anjos-7709881b4/">
+            <a target="_blank" href="https://www.linkedin.com/in/guilherme-vieira-dos-anjos-7709881b4/" className="hover:-translate-y-1 hover:scale-125 duration-300">
               <FaLinkedin />
             </a>
           </div>

@@ -20,7 +20,7 @@ const Contact = () => {
   };
 
   return (
-    <div id="contact" className="h-auto my-12 md:h-20 flex justify-center items-center">
+    <div id="contact" className="my-12 md:h-20 flex justify-center items-center">
       <section className="">
         <h1 className="text-pPurple font-julius text-xl my-4 flex items-center justify-center">
           Contato <IoIosContact />
