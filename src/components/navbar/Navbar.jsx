@@ -14,11 +14,11 @@ const Navbar = () => {
  }
   
   return (
-    <nav className={`bg-slate-50 p-2 fixed top-0 w-full z-10 font-quicksand transition duration-500 ease-in-out ${menuOpen ? "bg-opacity-100" : "bg-opacity-75 hover:bg-opacity-100"}`} >
+    <nav className={`bg-slate-50 p-2 fixed top-0 w-full z-10 font-quicksand transition duration-500 ease-in-out ${menuOpen ? "bg-opacity-100" : "bg-opacity-50 hover:bg-opacity-100"}`} >
       <div className=' flex justify-between md:flex md:justify-between items-center'>
-        <h1 className='text-pPurple md:ml-10'><a href="#home">Dos Anjos</a></h1>
+        <h1 className='text-2xl md:ml-10 heading font-julius text-pBlue' ><a href="#home">Dos Anjos</a></h1>
         <ul className='hidden md:flex md:justify-center' >
-          <li className="mx-4"><a className="text-pPurple hover:text-gray-400 duration-300" href="#home">Home</a></li>
+          <li className="mx-10"><a className="text-pPurple hover:text-gray-400 duration-300" href="#home">Home</a></li>
           <li className="mx-10"><a className="text-pPurple hover:text-gray-400 duration-300 " href="#projects">Projects</a></li>
           <li className="mx-10"><a className="text-pPurple hover:text-gray-400 duration-300" href="#aboutMe">About Me</a></li>
           <li className="mx-10"><a className="text-pPurple hover:text-gray-400 duration-300" href="#contact">Contact</a></li>

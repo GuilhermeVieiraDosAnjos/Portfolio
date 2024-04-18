@@ -1,5 +1,7 @@
 import { useState } from "react";
-import { IoIosContact, IoIosCopy, IoCheckmarkDone } from "../index.js";
+import { IoIosContact, IoIosCopy, IoCheckmarkDone, FaGithub,
+  FaFilePdf,
+  FaLinkedin } from "../index.js";
 
 const Contact = () => {
   const [email, setEmail] = useState("guilhermevieiradosanjos02@gmail.com");
@@ -20,7 +22,7 @@ const Contact = () => {
   };
 
   return (
-    <div id="contact" className="my-12 md:h-20 flex justify-center items-center">
+    <div id="contact" className="my-12 md:h-46 flex justify-center items-center">
       <section className="">
         <h1 className="text-pPurple font-julius text-xl my-4 flex items-center justify-center">
           Contato <IoIosContact />
@@ -36,16 +38,27 @@ const Contact = () => {
           <div className="sm:flex sm:w-full sm:justify-around">
             <div className="">
               <button
-                className="p-2 bg-slate-300 rounded-lg flex flex-row-reverse gap-2 items-center"
+                className="p-2 bg-slate-300 hover:bg-slate-200 duration-300 rounded-lg flex flex-row-reverse gap-2 items-center"
                 onClick={handleCopyToClipboard}
               >
                 {copySuccess ? (
                   <IoCheckmarkDone className="text-pPurple mr-2" />
                 ) : (
-                  <IoIosCopy />
+                  <IoIosCopy className="text-pPurple" />
                 )}
                 {copySuccess ? "Copied" : email}
               </button>
+              <div className="flex justify-around text-center text-pPurple items-center text-2xl my-5 ">
+            <a target="_blank" href="https://github.com/GuilhermeVieiraDosAnjos" className="hover:-translate-y-1 hover:scale-125 duration-300">
+              <FaGithub />
+            </a>
+            <a href="\public\Curriculum.pdf" download={true} className="hover:-translate-y-1 hover:scale-125 duration-300">
+              <FaFilePdf />
+            </a>
+            <a target="_blank" href="https://www.linkedin.com/in/guilherme-vieira-dos-anjos-7709881b4/" className="hover:-translate-y-1 hover:scale-125 duration-300">
+              <FaLinkedin />
+            </a>
+          </div>
             </div>
           </div>
         </div>

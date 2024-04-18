@@ -33,8 +33,8 @@ const Home = () => {
         <div className="p-2 md:p-0">
           <div className="text-xl">
             <p>
-              Olá, me chamo{" "}
-              <strong className="text-pPurple">
+              Olá &#128075;, me chamo{" "}
+              <strong className="text-pPurple nameG">
                 Guilherme Vieira dos Anjos
               </strong>
             </p>

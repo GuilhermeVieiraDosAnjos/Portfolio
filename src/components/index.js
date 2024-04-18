@@ -9,9 +9,17 @@ import { SiTailwindcss } from "react-icons/si";
 import { IoCheckmarkDone } from "react-icons/io5";
 import { IoIosContact,IoIosCopy } from "react-icons/io";
 import { MdLocationOn, MdEmail, MdWork  } from "react-icons/md";
+import {DiGit , DiBootstrap, DiCss3 , DiJsBadge, DiHtml5, DiNodejsSmall, DiReact} from "react-icons/di"
 
 
 export {
+    DiCss3,
+    DiGit,
+    DiBootstrap,
+    DiJsBadge,
+    DiHtml5, 
+    DiNodejsSmall,
+    DiReact,
     About,
     MdEmail,
     MdWork,
