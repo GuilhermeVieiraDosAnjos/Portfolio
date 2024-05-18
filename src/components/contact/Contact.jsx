@@ -1,10 +1,8 @@
 import { useState } from "react";
-import { IoIosContact, IoIosCopy, IoCheckmarkDone, FaGithub,
-  FaFilePdf,
-  FaLinkedin } from "../index.js";
+import { IoIosContact, IoIosCopy, IoCheckmarkDone, FaGithub, FaFilePdf, FaLinkedin } from "../index.js";
 
 const Contact = () => {
-  const [email, setEmail] = useState("guilhermevieiradosanjos02@gmail.com");
+  const email = "guilhermevieiradosanjos02@gmail.com";
   const [copySuccess, setCopySuccess] = useState(false);
 
   const handleCopyToClipboard = () => {
@@ -28,11 +26,11 @@ const Contact = () => {
           Contato <IoIosContact />
         </h1>
 
-        <div className="flex flex-col  font-quicksand  items-center  justify-center gap-4 h-full">
+        <div className="flex flex-col font-quicksand items-center justify-center gap-4 h-full">
           <h1 className="text-xl">Entre em contato comigo!</h1>
 
           <div className="text-pPurple">
-            <img src="boxemail.svg" className="h-24 " alt="" />
+            <img src="boxemail.svg" className="h-24" alt="" />
           </div>
 
           <div className="sm:flex sm:w-full sm:justify-around">
@@ -49,16 +47,16 @@ const Contact = () => {
                 {copySuccess ? "Copied" : email}
               </button>
               <div className="flex justify-around text-center text-pPurple items-center text-2xl my-5 ">
-            <a target="_blank" href="https://github.com/GuilhermeVieiraDosAnjos" className="hover:-translate-y-1 hover:scale-125 duration-300">
-              <FaGithub />
-            </a>
-            <a href="\public\Curriculum.pdf" download={true} className="hover:-translate-y-1 hover:scale-125 duration-300">
-              <FaFilePdf />
-            </a>
-            <a target="_blank" href="https://www.linkedin.com/in/guilherme-vieira-dos-anjos-7709881b4/" className="hover:-translate-y-1 hover:scale-125 duration-300">
-              <FaLinkedin />
-            </a>
-          </div>
+                <a target="_blank" href="https://github.com/GuilhermeVieiraDosAnjos" className="hover:-translate-y-1 hover:scale-125 duration-300">
+                  <FaGithub />
+                </a>
+                <a href="\public\Curriculum.pdf" download={true} className="hover:-translate-y-1 hover:scale-125 duration-300">
+                  <FaFilePdf />
+                </a>
+                <a target="_blank" href="https://www.linkedin.com/in/guilherme-vieira-dos-anjos-7709881b4/" className="hover:-translate-y-1 hover:scale-125 duration-300">
+                  <FaLinkedin />
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -66,5 +64,6 @@ const Contact = () => {
     </div>
   );
 };
+
 
 export default Contact;

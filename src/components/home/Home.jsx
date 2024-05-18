@@ -8,10 +8,10 @@ import {
   FaLinkedin,
   IoCheckmarkDone
 } from "../index.js";
+import PropTypes from 'prop-types';
 
 const Home = () => {
   const [email, setEmail] = useState("guilhermevieiradosanjos02@gmail.com");
-  const [navbar, setNavbar] = useState(true)
   const [copySuccess, setCopySuccess] = useState(false);
 
   const handleCopyToClipboard = () => {
@@ -27,6 +27,7 @@ const Home = () => {
         console.error("Failed to copy email: ", error);
       });
   };
+
   return (
     <div className="h-screen ">
       <section id="home" className="flex h-full items-center gap-4 justify-center ">
@@ -86,6 +87,10 @@ const Home = () => {
     </div>
 
   );
+};
+
+Home.propTypes = {
+  email: PropTypes.string.isRequired
 };
 
 export default Home;

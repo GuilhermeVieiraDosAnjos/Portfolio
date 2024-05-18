@@ -1,4 +1,3 @@
-import "./App.css";
 import { About, Contact, Home, Navbar, Projects} from './components'
 
 
