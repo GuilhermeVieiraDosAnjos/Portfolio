@@ -71,7 +71,7 @@ const Home = () => {
             <a href="\public\Curriculum.pdf" download={true} className="hover:-translate-y-1 hover:scale-125 duration-300">
               <FaFilePdf />
             </a>
-            <a target="_blank" href="https://www.linkedin.com/in/guilherme-vieira-dos-anjos-7709881b4/" className="hover:-translate-y-1 hover:scale-125 duration-300">
+            <a target="_blank" href="https://www.linkedin.com/in/guilhermevieiradosanjos/" className="hover:-translate-y-1 hover:scale-125 duration-300">
               <FaLinkedin />
             </a>
           </div>

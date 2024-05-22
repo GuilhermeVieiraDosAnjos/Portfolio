@@ -22,9 +22,9 @@ const Navbar = () => {
 
         <ul className='hidden md:flex md:justify-center'>
           <li className="mx-10"><a className="text-pPurple hover:text-gray-400 duration-300" href="#home">Home</a></li>
-          <li className="mx-10"><a className="text-pPurple hover:text-gray-400 duration-300" href="#projects">Projects</a></li>
-          <li className="mx-10"><a className="text-pPurple hover:text-gray-400 duration-300" href="#aboutMe">About Me</a></li>
-          <li className="mx-10"><a className="text-pPurple hover:text-gray-400 duration-300" href="#contact">Contact</a></li>
+          <li className="mx-10"><a className="text-pPurple hover:text-gray-400 duration-300" href="#projects">Projetos</a></li>
+          <li className="mx-10"><a className="text-pPurple hover:text-gray-400 duration-300" href="#aboutMe">Sobre Mim</a></li>
+          <li className="mx-10"><a className="text-pPurple hover:text-gray-400 duration-300" href="#contact">Contato</a></li>
         </ul>
 
         <button type='button' onClick={toggleMenu} className='md:hidden'>
